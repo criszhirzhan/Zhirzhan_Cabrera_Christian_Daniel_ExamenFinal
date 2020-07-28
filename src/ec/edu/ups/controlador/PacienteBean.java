@@ -1,5 +1,7 @@
 package ec.edu.ups.controlador;
 
+import java.io.Serializable;
+
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
@@ -14,7 +16,7 @@ import ec.edu.ups.modelo.Paciente;
 @FacesConfig(version = FacesConfig.Version.JSF_2_3)
 @Named
 @SessionScoped
-public class PacienteBean {
+public class PacienteBean implements Serializable{
 
 	public PacienteBean() {
 		// TODO Auto-generated constructor stub
@@ -78,6 +80,4 @@ public class PacienteBean {
 		this.nombre = nombre;
 	}
 	
-	
-
 }

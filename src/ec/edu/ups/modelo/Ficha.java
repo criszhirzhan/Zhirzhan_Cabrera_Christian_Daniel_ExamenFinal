@@ -34,10 +34,9 @@ public class Ficha implements Serializable {
 		
 	}
 
-	public Ficha(List<Enfermedad> enfermedades, String presion, String frecuenciaCardiaca,
+	public Ficha( String presion, String frecuenciaCardiaca,
 			String frecuenciaRespiratoria, int temperatura, String saturacion) {
-		
-		this.enfermedades = enfermedades;
+
 		this.presion = presion;
 		this.frecuenciaCardiaca = frecuenciaCardiaca;
 		this.frecuenciaRespiratoria = frecuenciaRespiratoria;
@@ -99,6 +98,13 @@ public class Ficha implements Serializable {
 
 	public void setSaturacion(String saturacion) {
 		this.saturacion = saturacion;
+	}
+
+	@Override
+	public String toString() {
+		return "Ficha [codigo=" + codigo + ", presion=" + presion + ", frecuenciaCardiaca=" + frecuenciaCardiaca
+				+ ", frecuenciaRespiratoria=" + frecuenciaRespiratoria + ", temperatura=" + temperatura
+				+ ", saturacion=" + saturacion + ", enfermedades=" + enfermedades + "]";
 	}
 	
 	
